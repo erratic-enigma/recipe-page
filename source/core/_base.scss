@@ -1,0 +1,61 @@
+/* core : base - ============================================================================================= - */
+@use '@/scss/units' as unit;
+
+body {
+  background-color: rgb(var(--core-neutral-eggshell));
+  font:
+    var(--core-fontWeight-normal) normal
+    var(--core-fontSizeFixed-normal) / var(--core-lineHeight-paragraph)
+    var(--core-fontFamily-outfit), var(--system-fontFamily-sansSerif)
+  ;
+  color: rgb(var(--core-neutral-wengeBrown));
+}
+
+h1 {
+  font-size: var(--core-fontSizeFixed-large);
+  color: rgb(var(--core-neutral-darkCharcoal));
+}
+
+h2 {
+  font-size: var(--core-fontSizeFixed-big);
+  color:  hsl(var(--core-color-nutmeg));
+}
+
+li {
+  margin-inline-start: calc(var(--core-page-gutter) / 2);
+  padding-inline-start: unit.rem(16);
+}
+
+strong {
+  font-weight: var(--core-fontWeight-bold);
+}
+
+::marker {
+  color: hsl(var(--core-color-nutmeg));
+}
+
+:is(h1, h2) {
+  font-family: var(--core-fontFamily-youngSerif), var(--system-fontFamily-serif);
+  font-weight: var(--core-fontWeight-normal);
+  line-height: var(--core-lineHeight-heading);
+}
+
+:is(ol, ul) {
+  padding: 0;
+}
+
+:is(h1, h2, p) {
+  overflow-wrap: break-word;
+}
+
+ol > li::marker {
+  font-weight: var(--core-fontWeight-bold);
+}
+
+ul > li::marker {
+  font-size: var(--core-fontSizeFixed-fine);
+}
+
+:is(ul > li + li, ol > li + li) {
+  margin-block-start: unit.rem(8);
+}
