@@ -21,7 +21,7 @@ This is my solution to the [Recipe page challenge](https://frontendmentor.io/cha
 
 ### Links
 
-- Solution URL: <https://frontendmentor.io/solutions/>
+- Solution URL: <https://frontendmentor.io/solutions/recipe-page-tO4hoBOjlg>
 - Live Site URL: <https://erratic-enigma.github.io/recipe-page>
 
 ## My process
