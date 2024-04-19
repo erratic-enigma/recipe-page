@@ -1,0 +1,27 @@
+/* layout : main - =========================================================================================== - */
+@use '@/scss/units' as unit;
+
+main {
+  & {
+    --layout-main-column: content;
+    --layout-main-gutter: #{unit.rem(28)};
+    --layout-main-maxWidth: #{unit.rem(742)};
+    --layout-page-gridArea: page;
+
+    container: main / inline-size;
+    display: grid;
+    grid-template-columns:
+      [gutter-start] minmax(auto, var(--layout-main-gutter))
+      [content-start] 1fr
+      [content-end] minmax(auto, var(--layout-main-gutter))
+      [gutter-end]
+    ;
+    row-gap: unit.rem(24);
+    place-self: center;
+    width: min(var(--layout-main-maxWidth), 100%);
+  }
+
+  > * {
+    grid-column: var(--layout-main-column);
+  }
+}

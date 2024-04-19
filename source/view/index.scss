@@ -6,3 +6,8 @@
 @use '@/core/custom-properties';
 @use '@/core/reset';
 @use '@/core/base';
+
+// layouts //
+@use '@/layout/body';
+@use '@/layout/main';
+@use '@/layout/footer';

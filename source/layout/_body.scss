@@ -1,0 +1,18 @@
+/* layout : body - =========================================================================================== - */
+@use '@/scss/units' as unit;
+
+body {
+  & {
+    display: grid;
+    grid-template-areas:
+      'page'
+      'attributes'
+    ;
+    grid-template-rows: 1fr auto;
+    row-gap: unit.rem(16);
+  }
+
+  > :is(footer, main) {
+    grid-area: var(--layout-page-gridArea);
+  }
+}
