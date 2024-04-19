@@ -1,0 +1,19 @@
+// utility : font variables - ================================================================================ - //
+@use 'sass:map';
+
+// variable font suffix //
+$_variable-suffix: '(Variable)';
+
+// outfit //
+$outfit: (
+  'name': 'Outfit',
+  'name (variable)': 'Outfit #{$_variable-suffix}',
+  'url': '/outfit'
+);
+
+// young-serif //
+$young-serif: (
+  'name': 'Young Serif',
+  'name (variable)': 'Young Serif #{$_variable-suffix}',
+  'url': '/young-serif'
+);

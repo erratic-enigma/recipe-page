@@ -1,0 +1,52 @@
+/* core : font family declarations - ========================================================================= - */
+@use '@/scss/fonts' as font;
+@use '@/scss/font-face' as face;
+@use 'sass:map';
+
+/* outfit ------------------------------------------------------------------------------------------------------ */
+/* 400 (normal) */
+@include face.declare(
+  $family: map.get(font.$outfit, 'name'),
+  $style: normal,
+  $weight: 400,
+  $url: '#{map.get(font.$outfit, "url")}',
+  $type: 'woff2'
+);
+
+/* 600 (semi bold) */
+@include face.declare(
+  $family: map.get(font.$outfit, 'name'),
+  $style: normal,
+  $weight: 600,
+  $url: '#{map.get(font.$outfit, "url")}',
+  $type: 'woff2'
+);
+
+/* 700 (bold) */
+@include face.declare(
+  $family: map.get(font.$outfit, 'name'),
+  $style: normal,
+  $weight: 700,
+  $url: '#{map.get(font.$outfit, "url")}',
+  $type: 'woff2'
+);
+
+/* variable */
+@include face.declare(
+  $family: map.get(font.$outfit, 'name (variable)'),
+  $style: normal,
+  $weight: 400 700,
+  $url: '#{map.get(font.$outfit, "url")}',
+  $type: 'truetype',
+  $variable: true
+);
+
+/* young-serif ------------------------------------------------------------------------------------------------- */
+/* 400 (normal) */
+@include face.declare(
+  $family: map.get(font.$young-serif, 'name'),
+  $style: normal,
+  $weight: 400,
+  $url: '#{map.get(font.$young-serif, "url")}',
+  $type: 'woff2',
+);
