@@ -1,0 +1,66 @@
+/* core : root custom properties - =========================================================================== - */
+@use '@/scss/fonts' as font;
+@use '@/scss/units' as unit;
+@use 'sass:map';
+
+:root {
+  /* system font families */
+  --system-fontFamily-mono: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  --system-fontFamily-serif: 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --system-fontFamily-sansSerif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'segoe ui', 'helvetica neue', helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+  /* times */
+  --core-time-fast: 250ms;
+
+  /* page layout */
+  --core-page-gutter: #{unit.rem(48)};
+
+  /* font families */
+  --core-fontFamily-outfit: #{map.get(font.$outfit, 'name')};
+  --core-fontFamily-youngSerif: #{map.get(font.$young-serif, 'name')};
+
+  /* font sizes */
+  --core-fontSizeFixed-big: #{unit.rem(28)};
+  --core-fontSizeFixed-fine: #{unit.rem(12)};
+  --core-fontSizeFixed-large: #{unit.rem(40)};
+  --core-fontSizeFixed-small: #{unit.rem(14)};
+  --core-fontSizeFixed-medium: #{unit.rem(20)};
+  --core-fontSizeFixed-normal: #{unit.rem(16)};
+
+  /* font weights */
+  --core-fontWeight-bold: 700;
+  --core-fontWeight-normal: 400;
+  --core-fontWeight-semiBold: 600;
+
+  /* line heights */
+  --core-lineHeight-paragraph: 1.6;
+  --core-lineHeight-heading: 1;
+
+  /* colours (hsl) */
+  --core-color-nutmeg: 14 45% 36%;
+  --core-color-darkRaspberry: 332 51% 32%;
+
+  --core-color-rajah: 34 100% 73%;
+  --core-color-cognac: 15 67% 41%;
+  --core-color-mantis: 110 41% 52%;
+  --core-color-pixieGreen: 107 33% 79%;
+
+  /* neutrals (rgb) */
+  --core-neutral-white: 255 255 255;
+  --core-neutral-eggshell: 243 230 216;
+  --core-neutral-lightGrey: 228 222 216;
+  --core-neutral-roseWhite: 255 245 250;
+  --core-neutral-wengeBrown: 95 87 78;
+  --core-neutral-darkCharcoal: 48 45 44;
+
+  --core-neutral-black: 0 0 0;
+  --core-neutral-seashell: 240 240 240;
+  --core-neutral-marshland: 20 20 20;
+
+  /* design elements */
+  --design-border-separator: solid 1px rgb(var(--core-neutral-lightGrey));
+
+  @supports(font-variation-settings: normal) {
+    --core-fontFamily-outfit: '#{map.get(font.$outfit, 'name (variable)')}';
+  }
+}
