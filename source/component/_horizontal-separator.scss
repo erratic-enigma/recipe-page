@@ -1,0 +1,19 @@
+/* component : horizontal separator - ======================================================================== - */
+@use '@/scss/units' as unit;
+
+.horizontal-separator {
+  & {
+    --separator: var(--design-border-separator);
+    --spacing: var(--horizontalSeparator-spacing, 0);
+  }
+
+  &.-above {
+    border-top: var(--separator);
+    padding-block-start: var(--spacing);
+  }
+
+  &.-below {
+    border-bottom: var(--separator);
+    padding-block-end: var(--spacing);
+  }
+}

@@ -1,0 +1,13 @@
+/* component : nutrition / table - =========================================================================== - */
+@use '@/scss/units' as unit;
+
+.nutrition-table {
+  & {
+    --nutritionItem-blockPadding: #{unit.rem(12)};
+    --nutritionItem-inlinePadding: #{unit.rem(48)};
+
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+  }
+}

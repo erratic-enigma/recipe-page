@@ -11,3 +11,13 @@
 @use '@/layout/body';
 @use '@/layout/main';
 @use '@/layout/footer';
+
+// components //
+@use '@/component/attribution-bar';
+@use '@/component/horizontal-separator';
+@use '@/component/notice-container';
+@use '@/component/nutrition/item' as nutrition-item;
+@use '@/component/nutrition/table' as nutrition-table;
+@use '@/component/nutrition/tbody' as nutrition-tbody;
+@use '@/component/opening-image';
+@use '@/component/recipe-instructions';

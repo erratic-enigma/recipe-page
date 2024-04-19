@@ -1,0 +1,6 @@
+/* component : nutrition / tbody - =========================================================================== - */
+.nutrition-tbody {
+  > .item:not(:last-child) {
+    border-bottom: var(--separator);
+  }
+}

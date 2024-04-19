@@ -1,0 +1,24 @@
+/* component : nutrition / table item - ====================================================================== - */
+.nutrition-item {
+  & {
+    --separator: var(--design-border-separator, none);
+    --blockPadding: var(--nutritionItem-blockPadding, 0);
+    --inlinePadding: var(--nutritionItem-inlinePadding, 0);
+  }
+
+  > .title {
+    padding-inline-start: var(--inlinePadding);
+    font-weight: var(--core-fontWeight-normal);
+    text-align: start;
+  }
+
+  > .unit {
+    padding-inline-end: var(--inlinePadding);
+    font-weight: var(--core-fontWeight-bold);
+    color: hsl(var(--core-color-nutmeg));
+  }
+
+  > :is(.title, .unit) {
+    padding-block: var(--blockPadding);
+  }
+}

@@ -1,0 +1,30 @@
+/* component : notice container - ============================================================================ - */
+@use '@/scss/units' as unit;
+
+.notice-container {
+  & {
+    --inlinePadding: #{unit.rem(24)};
+
+    display: flex;
+    flex-direction: column;
+    row-gap: unit.rem(12);
+    border-radius: 12px;
+    padding-block: unit.rem(16);
+    padding-inline: var(--inlinePadding);
+    background-color: rgb(var(--core-neutral-roseWhite));
+  }
+
+  > .heading {
+    font-size: var(--core-fontSizeFixed-medium);
+    font-weight: var(--core-fontWeight-semiBold);
+    color: hsl(var(--core-color-darkRaspberry));
+  }
+
+  > .list > li {
+    margin-inline-start: calc(var(--inlinePadding) / 2);
+  }
+
+  > .list > ::marker {
+    color: hsl(var(--core-color-darkRaspberry));
+  }
+}

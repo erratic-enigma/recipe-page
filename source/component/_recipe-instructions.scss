@@ -1,0 +1,19 @@
+/* component : recipe instructions - ========================================================================= - */
+@use '@/scss/units' as unit;
+
+.recipe-instructions {
+  & {
+    --blockPadding: #{unit.rem(28)};
+    --horizontalSeparator-spacing: #{unit.rem(24)};
+
+    padding-block-end: var(--blockPadding);
+    background-color: rgb(var(--core-neutral-white));
+  }
+
+@media (width >= unit.em(742)) {
+  & {
+    border-radius: unit.rem(24);
+    padding-block: var(--blockPadding);
+  }
+}
+}

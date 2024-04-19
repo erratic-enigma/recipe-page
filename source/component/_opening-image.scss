@@ -1,0 +1,25 @@
+/* component : recipe container - ============================================================================ - */
+@use '@/scss/units' as unit;
+
+.opening-image {
+  & {
+    --layout-main-column: gutter;
+
+    justify-self: center;
+  }
+
+@container (width >= #{unit.em(686)}) {
+  & {
+    --borderRadius: #{unit.rem(16)};
+
+    overflow: hidden;
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+  }
+}
+
+@container (width >= #{unit.em(742)}) {
+  & {
+    border-radius: var(--borderRadius);
+  }
+}
+}
