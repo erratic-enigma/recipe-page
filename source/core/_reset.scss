@@ -1,0 +1,25 @@
+/* core : reset - ============================================================================================= - */
+@use '@/scss/units' as unit;
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  font-family: var(--system-fontFamily-mono);
+  font-size: var(--core-fontSizeFixed-fine);
+  text-align: center;
+  color: rgb(var(--core-neutral-black));
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+}
